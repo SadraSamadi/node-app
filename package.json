@@ -1,0 +1,7 @@
+{
+  "name": "node-app-scripts",
+  "version": "1.0.0-beta.0",
+  "main": "index.js",
+  "author": "Sadra Samadi <sadra.smd@gmail.com> (https://sadrasamadi.github.io/)",
+  "license": "MIT"
+}

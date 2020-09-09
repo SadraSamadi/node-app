@@ -16,11 +16,11 @@
     "scripts"
   ],
   "files": [
-    "src"
+    "lib"
   ],
   "license": "MIT",
-  "main": "src",
-  "bin": "src/cli.js",
+  "main": "lib",
+  "bin": "lib/cli.js",
   "scripts": {
     "release:alpha": "yarn publish --prerelease --tag alpha",
     "release:beta": "yarn publish --prerelease --tag beta"
@@ -37,7 +37,9 @@
     "fs-extra": "^9.0.1",
     "lodash": "^4.17.20",
     "terser-webpack-plugin": "^4.1.0",
+    "typescript": "^4.0.2",
     "webpack": "^4.44.1",
+    "webpack-node-externals": "^2.5.2",
     "winston": "^3.3.3",
     "yargs": "^16.0.0"
   },
@@ -47,6 +49,7 @@
     "@types/node": "^14.6.4",
     "@types/terser-webpack-plugin": "^4.1.0",
     "@types/webpack": "^4.41.22",
+    "@types/webpack-node-externals": "^2.5.0",
     "@types/yargs": "^15.0.5"
   }
 }

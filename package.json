@@ -1,7 +1,52 @@
 {
   "name": "node-app-scripts",
   "version": "1.0.0-beta.0",
-  "main": "index.js",
-  "author": "Sadra Samadi <sadra.smd@gmail.com> (https://sadrasamadi.github.io/)",
-  "license": "MIT"
+  "description": "Configuration and scripts for Node.js App.",
+  "homepage": "https://github.com/SadraSamadi/node-app-scripts/",
+  "repository": "https://github.com/SadraSamadi/node-app-scripts/",
+  "author": {
+    "name": "Sadra Samadi",
+    "email": "sadra.smd@gmail.com",
+    "url": "https://sadrasamadi.github.io/"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "node-app",
+    "scripts"
+  ],
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "main": "src",
+  "bin": "src/cli.js",
+  "scripts": {
+    "release:alpha": "yarn publish --prerelease --tag alpha",
+    "release:beta": "yarn publish --prerelease --tag beta"
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-typescript-metadata": "^0.3.0",
+    "fs-extra": "^9.0.1",
+    "lodash": "^4.17.20",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "winston": "^3.3.3",
+    "yargs": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^14.6.4",
+    "@types/terser-webpack-plugin": "^4.1.0",
+    "@types/webpack": "^4.41.22",
+    "@types/yargs": "^15.0.5"
+  }
 }

@@ -46,12 +46,12 @@ Configuration and scripts for Node.js App.
 Usage: node-app-scripts command [options]
 
 Commands:
-  node-app-scripts clean  Clean up.
-  node-app-scripts build  Build sources.
+  node-app-scripts clean  Clean up.                                 [aliases: c]
+  node-app-scripts build  Build sources.                            [aliases: b]
 
 Options:
-      --input    Input directory.                      [string] [default: "src"]
-      --output   Output directory.                    [string] [default: "dist"]
+  -i, --input    Input directory.                      [string] [default: "src"]
+  -o, --output   Output directory.                    [string] [default: "dist"]
   -v, --version  Show version number                                   [boolean]
   -h, --help     Show help                                             [boolean]
 ```

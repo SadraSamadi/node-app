@@ -6,6 +6,11 @@ import {Options} from './model';
 
 export default async function (opts: Options): Promise<Configuration> {
   logger.info('config');
+  let cfg = await config(opts);
+  return override(cfg, opts);
+}
+
+async function config(opts: Options): Promise<Configuration> {
   return {
     context: opts.input,
     entry: './',
@@ -52,4 +57,13 @@ export default async function (opts: Options): Promise<Configuration> {
     externals: opts.node ? externals() : void 0,
     node: opts.node ? false : void 0
   };
+}
+
+async function override(cfg: Configuration, opts: Options): Promise<Configuration> {
+  try {
+    let {default: func} = await import(opts.override);
+    return func(cfg, opts);
+  } catch (err) {
+    return cfg;
+  }
 }

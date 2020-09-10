@@ -4,6 +4,8 @@ export interface Options {
 
   output: string;
 
+  override: string;
+
   prod: boolean;
 
   node: boolean;

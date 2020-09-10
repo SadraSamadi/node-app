@@ -9,7 +9,7 @@ export function prepare(opts: Options): Options {
   return _.assign({}, opts, {
     input: resolve(opts.input),
     output: resolve(opts.output),
-    override: resolve(opts.override)
+    override: opts.override && resolve(opts.override)
   });
 }
 

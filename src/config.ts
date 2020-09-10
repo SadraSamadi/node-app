@@ -1,3 +1,4 @@
+import CopyPlugin from 'copy-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import {Configuration, ProgressPlugin} from 'webpack';
 import externals from 'webpack-node-externals';
@@ -15,7 +16,10 @@ async function config(opts: Options): Promise<Configuration> {
     context: opts.input,
     entry: './',
     mode: opts.prod ? 'production' : 'development',
-    output: {filename: 'index.js'},
+    output: {
+      path: opts.output,
+      filename: 'index.js'
+    },
     module: {
       rules: [
         {
@@ -50,7 +54,16 @@ async function config(opts: Options): Promise<Configuration> {
       ]
     },
     plugins: [
-      new ProgressPlugin()
+      new ProgressPlugin(),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: opts.assets,
+            to: opts.assets,
+            noErrorOnMissing: true
+          }
+        ]
+      })
     ],
     devtool: opts.prod ? false : 'cheap-module-source-map',
     target: opts.node ? 'node' : void 0,

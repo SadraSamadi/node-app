@@ -9,7 +9,7 @@ yargs
   .command<Options>({
     command: 'clean',
     aliases: 'c',
-    describe: 'Clean up.',
+    describe: 'Clean up outputs.',
     handler: clean
   })
   .command<Options>({
@@ -17,23 +17,29 @@ yargs
     aliases: 'b',
     describe: 'Build sources.',
     builder: args => args.options({
-      override: {
-        alias: 'r',
-        type: 'string',
-        desc: 'Webpack configuration overrider.',
-        default: 'webpack.override.js'
-      },
       prod: {
         alias: 'p',
         type: 'boolean',
-        desc: 'Enable production mode.',
+        desc: 'Build for production mode.',
         default: false
       },
       node: {
         alias: 'n',
         type: 'boolean',
-        desc: 'Enable node environment.',
+        desc: 'Build for node environment.',
         default: false
+      },
+      assets: {
+        alias: 'a',
+        type: 'string',
+        desc: 'Assets folder name.',
+        default: 'assets'
+      },
+      override: {
+        alias: 'r',
+        type: 'string',
+        desc: 'Webpack configuration overrider.',
+        default: 'webpack.override.js'
       }
     }),
     handler: build

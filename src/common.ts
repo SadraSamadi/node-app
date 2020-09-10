@@ -8,7 +8,8 @@ export function prepare(opts: Options): Options {
   logger.info('prepare');
   return _.assign({}, opts, {
     input: resolve(opts.input),
-    output: resolve(opts.output)
+    output: resolve(opts.output),
+    override: resolve(opts.override)
   });
 }
 

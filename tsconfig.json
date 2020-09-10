@@ -1,0 +1,9 @@
+{
+  "extends": "@sadrasamadi/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "src"
+  ]
+}

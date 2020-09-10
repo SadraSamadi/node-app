@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const winston = require('winston');
+import _ from 'lodash';
+import winston from 'winston';
 
-module.exports = winston.createLogger({
+export default winston.createLogger({
   format: winston.format.combine(
     winston.format.splat(),
     winston.format.metadata(),

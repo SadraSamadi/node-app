@@ -1,17 +1,16 @@
-const TerserPlugin = require('terser-webpack-plugin');
-const {ProgressPlugin} = require('webpack');
-const externals = require('webpack-node-externals');
-const logger = require('./logger');
+import TerserPlugin from 'terser-webpack-plugin';
+import {Configuration, ProgressPlugin} from 'webpack';
+import externals from 'webpack-node-externals';
+import logger from './logger';
+import {Options} from './model';
 
-module.exports = async function (opts) {
+export default async function (opts: Options): Promise<Configuration> {
   logger.info('config');
   return {
     context: opts.input,
     entry: './',
     mode: opts.prod ? 'production' : 'development',
-    output: {
-      filename: 'index.js'
-    },
+    output: {filename: 'index.js'},
     module: {
       rules: [
         {
@@ -21,20 +20,13 @@ module.exports = async function (opts) {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/env', {
-                useBuiltIns: 'usage',
-                corejs: 3
-              }],
+              ['@babel/env', {useBuiltIns: 'usage', corejs: 3}],
               ['@babel/preset-typescript']
             ],
             plugins: [
               ['babel-plugin-transform-typescript-metadata'],
-              ['@babel/plugin-proposal-decorators', {
-                legacy: true
-              }],
-              ['@babel/plugin-proposal-class-properties', {
-                loose: true
-              }],
+              ['@babel/plugin-proposal-decorators', {legacy: true}],
+              ['@babel/plugin-proposal-class-properties', {loose: true}],
               ['@babel/plugin-transform-runtime']
             ],
             inputSourceMap: true,
@@ -49,17 +41,15 @@ module.exports = async function (opts) {
     optimization: {
       minimize: opts.prod,
       minimizer: [
-        new TerserPlugin({
-          sourceMap: true
-        })
+        new TerserPlugin({sourceMap: true})
       ]
     },
     plugins: [
       new ProgressPlugin()
     ],
     devtool: opts.prod ? false : 'cheap-module-source-map',
-    target: opts.node ? 'node' : undefined,
-    externals: opts.node ? externals() : undefined,
-    node: opts.node ? false : undefined
+    target: opts.node ? 'node' : void 0,
+    externals: opts.node ? externals() : void 0,
+    node: opts.node ? false : void 0
   };
-};
+}

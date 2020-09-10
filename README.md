@@ -30,6 +30,16 @@ Configuration and scripts for Node.js App.
 }
 ```
 
+`tsconfig.json`
+```json5
+{
+  "scripts": "node-app-scripts/config/tsconfig.json",
+  "include": [
+    "src"
+  ]
+}
+```
+
 ## Options
 
 ```text

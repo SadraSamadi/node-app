@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 
-const yargs = require('yargs');
-const {clean, build} = require('./');
-const {name} = require('../package.json');
+import yargs from 'yargs';
+import {build, clean, Options} from './';
 
 yargs
-  .scriptName(name)
+  .scriptName('node-app-scripts')
   .usage('Usage: $0 command [options]')
-  .command({
+  .command<Options>({
     command: 'clean',
     describe: 'Clean up.',
     handler: clean
   })
-  .command({
+  .command<Options>({
     command: 'build',
     describe: 'Build sources.',
     builder: args => args.options({
@@ -29,7 +28,6 @@ yargs
     }),
     handler: build
   })
-  .demandCommand()
   .options({
     input: {
       type: 'string',
@@ -42,6 +40,7 @@ yargs
       default: 'dist'
     }
   })
+  .demandCommand()
   .alias('v', 'version')
   .alias('h', 'help')
   .version()

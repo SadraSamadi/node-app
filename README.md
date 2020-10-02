@@ -1,7 +1,7 @@
 # Node App
 
-![GitHub last commit](https://img.shields.io/github/last-commit/SadraSamadi/node-app-scripts?style=flat-square)
-![GitHub](https://img.shields.io/github/license/SadraSamadi/node-app-scripts?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/SadraSamadi/node-app?style=flat-square)
+![GitHub](https://img.shields.io/github/license/SadraSamadi/node-app?style=flat-square)
 
 #### `@node-app/scripts`
 

@@ -1,11 +1,19 @@
-# Node App Scripts
+# Node App
 
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/SadraSamadi/node-app-scripts)
-![npm](https://img.shields.io/npm/dw/node-app-scripts)
-![npm](https://img.shields.io/npm/v/node-app-scripts)
-![npm (tag)](https://img.shields.io/npm/v/node-app-scripts/beta)
-![GitHub last commit](https://img.shields.io/github/last-commit/SadraSamadi/node-app-scripts)
-![GitHub](https://img.shields.io/github/license/SadraSamadi/node-app-scripts)
+![GitHub last commit](https://img.shields.io/github/last-commit/SadraSamadi/node-app-scripts?style=flat-square)
+![GitHub](https://img.shields.io/github/license/SadraSamadi/node-app-scripts?style=flat-square)
+
+#### `@node-app/scripts`
+
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/release/npm/@node-app/scripts?style=flat-square)
+![npm](https://img.shields.io/npm/dw/@node-app/scripts?style=flat-square)
+![npm](https://img.shields.io/npm/v/@node-app/scripts?style=flat-square)
+
+#### `@node-app/runtime`
+
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/release/npm/@node-app/runtime?style=flat-square)
+![npm](https://img.shields.io/npm/dw/@node-app/runtime?style=flat-square)
+![npm](https://img.shields.io/npm/v/@node-app/runtime?style=flat-square)
 
 Configurations, scripts and runtime modules for Node.js App.
 
@@ -23,14 +31,11 @@ Configurations, scripts and runtime modules for Node.js App.
 `package.json`
 ```json5
 {
-  // ...
   "scripts": {
     // ...
     "clean": "node-app clean",
     "build": "node-app build"
-    // ...
-  },
-  // ...
+  }
 }
 ```
 

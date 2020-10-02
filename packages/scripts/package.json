@@ -9,6 +9,9 @@
     "email": "sadra.smd@gmail.com",
     "url": "https://sadrasamadi.github.io/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "node",
     "node.js",

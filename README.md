@@ -7,12 +7,16 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/SadraSamadi/node-app-scripts)
 ![GitHub](https://img.shields.io/github/license/SadraSamadi/node-app-scripts)
 
-Configuration and scripts for Node.js App.
+Configurations, scripts and runtime modules for Node.js App.
 
 ## Install
 
-- **NPM** `npm i -D node-app-scripts` and `npm i node-app-runtime`
-- **Yarn** `yarn add -D node-app-scripts` and `yarn add node-app-runtime`
+- **NPM**
+    - `npm i @node-app/runtime`
+    - `npm i -D @node-app/scripts`
+- **Yarn**
+    - `yarn add @node-app/runtime`
+    - `yarn add -D @node-app/scripts`
 
 ## Usage
 
@@ -22,8 +26,8 @@ Configuration and scripts for Node.js App.
   // ...
   "scripts": {
     // ...
-    "clean": "node-app-scripts clean",
-    "build": "node-app-scripts build"
+    "clean": "node-app clean",
+    "build": "node-app build"
     // ...
   },
   // ...
@@ -33,7 +37,7 @@ Configuration and scripts for Node.js App.
 `tsconfig.json`
 ```json5
 {
-  "scripts": "node-app-scripts/config/tsconfig.json",
+  "scripts": "@node-app/scripts/config/tsconfig.json",
   "include": [
     "src"
   ]
@@ -43,11 +47,11 @@ Configuration and scripts for Node.js App.
 ## Options
 
 ```text
-Usage: node-app-scripts command [options]
+Usage: node-app command [options]
 
 Commands:
-  node-app-scripts clean  Clean up.                                 [aliases: c]
-  node-app-scripts build  Build sources.                            [aliases: b]
+  node-app clean  Clean up.                                         [aliases: c]
+  node-app build  Build sources.                                    [aliases: b]
 
 Options:
   -i, --input    Input directory.                      [string] [default: "src"]
@@ -55,7 +59,3 @@ Options:
   -v, --version  Show version number                                   [boolean]
   -h, --help     Show help                                             [boolean]
 ```
-
-## Related
-
-[node-app-runtime](https://github.com/SadraSamadi/node-app-runtime)

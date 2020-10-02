@@ -1,0 +1,28 @@
+{
+  "name": "@node-app/runtime",
+  "version": "1.0.0",
+  "description": "Runtime modules for Node.js App.",
+  "homepage": "https://github.com/SadraSamadi/node-app/",
+  "repository": "https://github.com/SadraSamadi/node-app/",
+  "author": {
+    "name": "Sadra Samadi",
+    "email": "sadra.smd@gmail.com",
+    "url": "https://sadrasamadi.github.io/"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "node-app",
+    "runtime"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.7"
+  }
+}

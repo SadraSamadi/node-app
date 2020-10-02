@@ -32,7 +32,6 @@ Configurations, scripts and runtime modules for Node.js App.
 ```json5
 {
   "scripts": {
-    // ...
     "clean": "node-app clean",
     "build": "node-app build"
   }
